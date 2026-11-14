@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Evaluation harness comparison path</title>
+  <desc id="desc">Reference and candidate checkpoints are compared under fixed evaluation settings. Target behavior, preservation checks, and relevant controls inform a recorded decision with limitations. Candidate generation is not shown.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7db4ff"/>
+    </marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #e4e4e4; }
+      .label { font-size: 21px; font-weight: 600; }
+      .detail { font-size: 17px; fill: #b8b8b8; }
+      .panel { fill: #1b1b1b; stroke: #454545; stroke-width: 1.5; }
+      .line { fill: none; stroke: #7db4ff; stroke-width: 1.6; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="900" height="620" rx="6" fill="#111111"/>
+  <text x="40" y="49" class="label">Evaluation harness: comparison path</text>
+  <text x="40" y="78" class="detail">Compare checkpoints under fixed conditions and retain the decision evidence.</text>
+  <rect x="40" y="112" width="390" height="88" rx="5" class="panel"/>
+  <text x="235" y="148" text-anchor="middle" class="label">Reference checkpoint</text>
+  <text x="235" y="177" text-anchor="middle" class="detail">Unchanged comparison model</text>
+  <rect x="470" y="112" width="390" height="88" rx="5" class="panel"/>
+  <text x="665" y="148" text-anchor="middle" class="label">Candidate checkpoint</text>
+  <text x="665" y="177" text-anchor="middle" class="detail">Version under evaluation</text>
+  <path d="M235 200 V226 H400 V250" class="line"/>
+  <path d="M665 200 V226 H500 V250" class="line"/>
+  <rect x="230" y="252" width="440" height="88" rx="5" fill="#222222" stroke="#7db4ff" stroke-width="1.5"/>
+  <text x="450" y="288" text-anchor="middle" class="label">Compare outputs</text>
+  <text x="450" y="317" text-anchor="middle" class="detail">Fixed evaluation settings</text>
+  <path d="M450 340 V365 H175 V390" class="line"/>
+  <path d="M450 340 V390" class="line"/>
+  <path d="M450 340 V365 H725 V390" class="line"/>
+  <rect x="40" y="392" width="270" height="80" rx="5" class="panel"/>
+  <text x="175" y="424" text-anchor="middle" class="label">Target behavior</text>
+  <text x="175" y="451" text-anchor="middle" class="detail">Intended improvement</text>
+  <rect x="325" y="392" width="250" height="80" rx="5" class="panel"/>
+  <text x="450" y="424" text-anchor="middle" class="label">Preservation checks</text>
+  <text x="450" y="451" text-anchor="middle" class="detail">Regressions and tradeoffs</text>
+  <rect x="590" y="392" width="270" height="80" rx="5" class="panel"/>
+  <text x="725" y="424" text-anchor="middle" class="label">Relevant controls</text>
+  <text x="725" y="451" text-anchor="middle" class="detail">Alternative explanations</text>
+  <path d="M175 472 V495 H400 V516" class="line"/>
+  <path d="M450 472 V516" class="line"/>
+  <path d="M725 472 V495 H500 V516" class="line"/>
+  <rect x="230" y="518" width="440" height="72" rx="5" class="panel"/>
+  <text x="450" y="548" text-anchor="middle" class="label">Recorded decision</text>
+  <text x="450" y="575" text-anchor="middle" class="detail">Outcome, evidence, and limitations</text>
+</svg>
