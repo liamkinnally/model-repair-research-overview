@@ -2,7 +2,7 @@
 
 I’m investigating whether AI agents can diagnose failures in trained models and propose targeted weight changes that improve their behavior. A major part of the project is developing Python/PyTorch evaluation harnesses: the software that runs controlled experiments, validates model changes, and records the evidence behind each result.
 
-A useful change needs to do more than improve a score on the examples used to select it. It also needs to hold up on new examples, avoid unacceptable regressions, and justify its added complexity compared with simpler approaches. Those questions guide the evaluation work.
+In the [controlled repair study](#controlled-repair-study), an agent-proposed weight edit reduced errors on held-out controlled examples and met the predefined criteria. A later evaluation of the same frozen edit on fresh, more natural data did not establish a useful improvement.
 
 The work also includes reviewing related research, screening candidate problems for measurable failures, and checking published model artifacts before attempting behavioral reproduction.
 
@@ -60,17 +60,13 @@ Completed studies have produced controlled improvements as well as unsuccessful 
 
 | Study | Observed success | Limits |
 | --- | --- | --- |
-| Controlled repair | An agent-proposed weight edit reduced errors on held-out controlled examples and met the study’s predefined success criteria. | Some preservation measurements worsened within the allowed thresholds. A later evaluation of the frozen edit on fresh, more natural data did not establish useful improvement. |
+| <a name="controlled-repair-study"></a>Controlled repair | An agent-proposed weight edit reduced errors on held-out controlled examples and met the study’s predefined success criteria. | Some preservation measurements worsened within the allowed thresholds. A later evaluation of the frozen edit on fresh, more natural data did not establish useful improvement. |
 | Frozen-edit follow-up | A previously fixed edit improved target-task accuracy on new controlled examples and passed its predefined screen. Measured control decisions stayed unchanged. | Control score margins weakened, and another prespecified comparator performed better. Practical superiority remains unproved. |
 | Planted-damage recovery | Repeated agent sessions recovered most of the measured performance lost to deliberately introduced damage and met the recovery requirement. | Sessions reused one easy damaged condition containing a detectable clue; some required documented accounting exceptions. This does not establish recovery from arbitrary faults. |
 
 Reproduction preparation also verified the identity of published model artifacts through independent checks. Behavioral replay remains pending; artifact agreement is an engineering result, not a reproduced model improvement.
 
 These results demonstrate narrow controlled successes and working evaluation infrastructure. The research has not established a generally useful repair method or a consistent practical advantage over simpler alternatives. Candidates that miss their predefined requirements remain recorded as failures.
-
-## Development
-
-I use coding agents throughout the research process to design experiments, build evaluation tools, investigate failures, and review results. I guide the research questions and use the recorded comparisons to decide which ideas are worth pursuing.
 
 ## Inspiration
 
